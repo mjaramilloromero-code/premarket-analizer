@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: premarket-analyzer
+    runtime: python
+    schedule: "0 13 * * 1-5"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python premarket_analyzer.py
